@@ -1,0 +1,35 @@
+:root{
+    --silver:#BFB5AF;
+    --bone:#ECE2D0;
+    --almond:#D5B9B2;
+    --rose:#A26769;
+    --blackberry:#582C4D;
+}
+
+/*NAV BAR*/
+body{
+    margin: 0;
+}
+
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    background-color: var(--bone);
+}
+
+ul li{
+    float:left;
+}
+
+ul li a{
+    display:block;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    background-color: var(--almond);
+}
