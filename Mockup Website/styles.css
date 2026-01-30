@@ -4,19 +4,22 @@
     --almond:#D5B9B2;
     --rose:#A26769;
     --blackberry:#582C4D;
+    --blackberry-faded: rgba(88,44,77,.9)
 }
 
 /*NAV BAR*/
 body{
     margin: 0;
+    background-color: var(--blackberry-faded);
 }
 
 ul{
     list-style-type: none;
-    margin:0;
+    margin: 0;
     padding:0;
     overflow: hidden;
     background-color: var(--bone);
+    margin-bottom:1rem;
 }
 
 ul li{
@@ -33,3 +36,64 @@ ul li a{
 ul li a:hover{
     background-color: var(--almond);
 }
+
+
+/* Main Content*/
+
+/*main content box*/
+main{
+    background-color: var(--silver);
+    padding: 1.5rem 5rem;
+    margin:0 1rem;
+    border: 7px var(--rose) solid;
+    border-radius: 1.5rem;
+    max-width: 1200px;
+}
+
+/*displays flex, makes position relative for absolute children, centeres everything*/
+.content{
+    /*make it a relative point for any absolute position inside*/
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* centers this box, display items in this also flex*/
+.overlay_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 90%;
+    max-width: 90%;
+}
+
+.overlay_text h1{
+    font-size:clamp(1rem,8vw,5rem);
+    line-height: 1.2;
+}
+
+
+.overlay_text p{
+    font-size:clamp(1rem,2vw,3rem);
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.content img{
+    width: 100%;
+    max-width: 100%;
+    opacity:.5;
+    height: auto;
+    object-fit: cover;
+    min-height: 200px;
+}
+
+/*under hero*/
