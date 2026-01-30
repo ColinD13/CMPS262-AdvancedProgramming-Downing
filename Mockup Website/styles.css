@@ -61,6 +61,10 @@ main{
     text-align: center;
 }
 
+.hero{
+    position: relative;
+}
+
 /* centers this box, display items in this also flex*/
 .overlay_text{
     position: absolute;
@@ -94,6 +98,40 @@ main{
     height: auto;
     object-fit: cover;
     min-height: 200px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-/*under hero*/
+.under-hero{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.in-sub-level{
+    flex: 1 1 250px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.in-sub-level p{
+    font-size:clamp(1rem,3vw,3rem);
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--bone);
+    border: 5px var(--rose) solid;
+    padding: 3rem; 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.in-sub-level img{
+    border: 5px var(--rose) solid;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.in-sub-level:hover{
+    transform: scale(1.01);
+}
