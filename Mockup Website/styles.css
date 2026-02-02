@@ -44,7 +44,7 @@ ul li a:hover{
 /*main content box*/
 main{
     background-color: var(--silver);
-    padding: 1.5rem 5rem;
+    padding: 1.5rem clamp(1rem, 4vw, 5rem);
     margin:0 auto;
     border: 7px var(--rose) solid;
     border-radius: 1.5rem;
@@ -109,7 +109,7 @@ h1{
 .under-hero{
     display: flex;
     flex-direction: row;
-    margin-top: 5rem;
+    margin-top: 2rem;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
@@ -190,3 +190,73 @@ input:hover{
     text-align: center;
     min-width: 200px;
 }
+
+/*MENU TABLE*/
+.table-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background-color: var(--bone);
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+}
+
+th,td {
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+}
+
+
+th {
+    background-color: var(--rose);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tr:hover td {
+    background-color: var(--almond);
+}
+
+@media (max-width: 360px) {
+    table {
+        font-size: 0.55rem;
+    }
+    th, td {
+        padding: 0.2rem 0.3rem;
+    }
+}
+
+/*fix the borders on the top corners*/
+table tr:first-child th:first-child {
+    border-top-left-radius: 1rem;
+}
+
+table tr:first-child th:last-child {
+    border-top-right-radius: 1rem;
+}
+
+/*Toppings*/
+
+.in-sub-level-toppings{
+    flex: 1 1 250px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.toppings{
+    padding:1rem;
+    margin-bottom:1rem;
+    border: 4px var(--rose) solid;
+}
+
+.topping{
+    float:none;
+}   
