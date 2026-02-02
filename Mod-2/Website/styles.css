@@ -1,0 +1,271 @@
+:root{
+    --silver:#BFB5AF;
+    --bone:#ECE2D0;
+    --almond:#D5B9B2;
+    --rose:#A26769;
+    --blackberry:#582C4D;
+    --blackberry-faded: rgba(88,44,77,.9)
+}
+
+html, body {
+    height: 100%;          /* Make body full height */
+    margin: 0;             /* Remove default margin */
+}
+
+/*NAV BAR*/
+body{
+    margin: 0;
+    background-color: var(--blackberry-faded);
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+    background-color: var(--bone);
+}
+
+ul li{
+    float:left;
+}
+
+ul li a{
+    display:block;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+ul li a:hover{
+    background-color: var(--almond);
+}
+
+
+/* Main Content*/
+
+/*main content box*/
+main{
+    background-color: var(--silver);
+    padding: 1.5rem clamp(1rem, 4vw, 5rem);
+    margin:0 auto;
+    border: 7px var(--rose) solid;
+    border-radius: 1.5rem;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    flex: 1;  
+}
+
+h1{
+    font-size: 4rem;
+}
+
+/*displays flex, makes position relative for absolute children, centeres everything*/
+.content{
+    /*make it a relative point for any absolute position inside*/
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero{
+    position: relative;
+}
+
+/* centers this box, display items in this also flex*/
+.overlay_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 90%;
+    max-width: 90%;
+}
+
+.overlay_text h1{
+    font-size:clamp(1rem,8vw,5rem);
+    line-height: 1.2;
+}
+
+
+.overlay_text p{
+    font-size:clamp(1rem,2vw,3rem);
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.content img{
+    width: 100%;
+    max-width: 100%;
+    opacity:.5;
+    height: auto;
+    object-fit: cover;
+    min-height: 200px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.under-hero{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.in-sub-level{
+    flex: 1 1 250px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.in-sub-level p{
+    font-size:clamp(1rem,3vw,3rem);
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--bone);
+    border: 5px var(--rose) solid;
+    padding: 3rem; 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.in-sub-level img{
+    border: 5px var(--rose) solid;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.in-sub-level:hover{
+    transform: scale(1.01);
+}
+
+/*FORM CSS*/
+#contact-form{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input{
+    background-color: var(--bone);
+}
+
+input:hover{
+    transform: scale(1.05);
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    margin-bottom: 1.5rem;
+}
+
+#contact-form input{
+    width: 100%;
+    padding: .75rem;
+    border: 3px var(--rose) solid;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+  background-color: var(--rose);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.submit-btn:hover{
+    transform: scale(1.05);
+}
+
+.in-sub-level-form{
+    flex: 1 1 250px;
+    text-align: center;
+    min-width: 200px;
+}
+
+/*MENU TABLE*/
+.table-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background-color: var(--bone);
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+}
+
+th,td {
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+}
+
+
+th {
+    background-color: var(--rose);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tr:hover td {
+    background-color: var(--almond);
+}
+
+@media (max-width: 360px) {
+    table {
+        font-size: 0.55rem;
+    }
+    th, td {
+        padding: 0.2rem 0.3rem;
+    }
+}
+
+/*fix the borders on the top corners*/
+table tr:first-child th:first-child {
+    border-top-left-radius: 1rem;
+}
+
+table tr:first-child th:last-child {
+    border-top-right-radius: 1rem;
+}
+
+/*Toppings*/
+
+.in-sub-level-toppings{
+    flex: 1 1 250px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.toppings{
+    padding:1rem;
+    margin-bottom:1rem;
+    border: 4px var(--rose) solid;
+}
+
+.topping{
+    float:none;
+}   
