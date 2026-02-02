@@ -7,10 +7,17 @@
     --blackberry-faded: rgba(88,44,77,.9)
 }
 
+html, body {
+    height: 100%;          /* Make body full height */
+    margin: 0;             /* Remove default margin */
+}
+
 /*NAV BAR*/
 body{
     margin: 0;
     background-color: var(--blackberry-faded);
+    display: flex;
+    flex-direction: column;
 }
 
 ul{
@@ -19,7 +26,6 @@ ul{
     padding:0;
     overflow: hidden;
     background-color: var(--bone);
-    margin-bottom:1rem;
 }
 
 ul li{
@@ -50,6 +56,8 @@ main{
     border-radius: 1.5rem;
     max-width: 1200px;
     margin-bottom: 2rem;
+    margin-top: 1rem;
+    flex: 1;  
 }
 
 h1{
