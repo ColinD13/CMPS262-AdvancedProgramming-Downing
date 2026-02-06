@@ -9,6 +9,14 @@ app.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.get('/about', (reg,res) => {
+    res.sendFile(path.join(__dirname, "about.html"));
+});
+
+app.get('/contact', (reg,res) => {
+    res.sendFile(path.join(__dirname, "contact.html"));
+});
+
 //start service
 
 app.listen(port, () =>{
