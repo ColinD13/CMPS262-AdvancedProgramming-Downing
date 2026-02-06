@@ -8,5 +8,20 @@
 </head>
 <body>
     <h1>Welcome to the Express.js Contact Page!</h1>
+
+    <form action="/contact" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="other">Other form of contact</label>
+        <input type="text" id="other" name="other">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p>{{MESSAGE}}</p>
 </body>
 </html>
