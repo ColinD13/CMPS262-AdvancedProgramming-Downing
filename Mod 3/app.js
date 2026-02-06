@@ -1,10 +1,12 @@
 const express = require('express');
+const path = require("path");
 //init
 const app = express()
+app.use(express.static('public'));
 
 const port = 8006;
 app.get('/', (req,res) => {
-    res.send('Hello it is cold outside');
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 //start service
