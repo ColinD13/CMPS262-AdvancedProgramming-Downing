@@ -27,7 +27,7 @@ app.get('/contact', (reg,res) => {
 //handle post for contact form
 app.post('/contact', (reg, res) =>{
     const name = reg.body.name;
-    const message = `Thank you ${name} we have recioeved your message!`;
+    const message = `Thank you ${name} we have recieved your message!`;
     // time submitted
     const time = "Submitted at " + new Date().toTimeString();
 
